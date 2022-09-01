@@ -15,8 +15,6 @@ const AddRow = ((usersArr,setUsersArr,allValues,setAllValues,allSkills,flagSkill
         tmpArr["skills"]=allSkills;
         setAllValues(tmpArr);
         setUsersArr([...usersArr, allValues]);
-        console.log(allValues)
-
       }
 })
 

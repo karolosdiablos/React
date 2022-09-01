@@ -3,6 +3,8 @@ import './App.css';
 import Row from './components/Row';
 import Header from './components/Header';
 import AddNewUser from './components/AddNewUser';
+import DeleteAll from './components/microFunctions/DeleteAll';
+import DeleteRow from './components/microFunctions/DeleteRow';
 
 const users = [
   {
@@ -76,29 +78,6 @@ users.map((a,index) => {
   a.index=index;
 });
 
-
-
-
-const EditRow = (({a}) => {
-
-
-})
-
-
-const DeleteAll = ((usersArr,setUsersArr) => {
-  if (window.confirm("Na pewno chcesz usunąć tabelę?")) {
-    console.log(usersArr)
-    setUsersArr(usersArr=[]);
-  }})
-
-function DeleteRow(usersArr, setUsersArr, index) {
-    const tempArr = [...usersArr];
-    tempArr.splice(index,1);
-    setUsersArr(tempArr);
-
-}
-
-
 function App() {
 
   const [usersArr,setUsersArr] = useState(users);
@@ -137,7 +116,7 @@ function App() {
 
           </td></tr>
 
-        <Row usersArr={usersArr} setUsersArr={setUsersArr} DeleteRow={DeleteRow} DeleteAll={DeleteAll} EditRow={EditRow}/>
+        <Row usersArr={usersArr} setUsersArr={setUsersArr} DeleteRow={DeleteRow} DeleteAll={DeleteAll}/>
         </tbody>
         </table>
       </header>

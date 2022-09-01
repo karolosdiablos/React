@@ -43,7 +43,7 @@ const Row = (({usersArr,setUsersArr, DeleteRow, DeleteAll, EditRow}) => {
             
             <ul>
                 {Object.entries(a.skills).map((skill) =>
-                <li>
+                <li key={`${a.index}_${skill[0]}_skillsy`}>
                   {skill[0]}: {skill[1]}
                 </li>
                 )}
@@ -53,10 +53,12 @@ const Row = (({usersArr,setUsersArr, DeleteRow, DeleteAll, EditRow}) => {
           <td><button type="button" onClick={() => EditRow(a)}>Edytuj mnie</button></td>
       </tr>)}
       <tr><td>Suma wypłat: </td><td colSpan="6">{sumSalary} zł</td></tr>
-      <tr><td>Suma skilli: </td><td colSpan="6"><ul>{
+      <tr>
+        <td>Suma skilli: </td>
+        <td colSpan="6"><ul key={`sumskill`}>{
         Object.entries(sumSkill).map((skill) =>
         
-          <li>{skill[0]}: {skill[1]}</li>
+          <li key={`sumskill_${skill[0]}`}>{skill[0]}: {skill[1]}</li>
 
         )
       }</ul></td></tr>
