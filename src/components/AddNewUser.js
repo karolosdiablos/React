@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {useState } from "react";
 import AddRow from "./AddRow";
 import AddSkill from "./AddSkill";
 
@@ -51,7 +51,7 @@ const AddNewUser =  (({usersArr,setUsersArr}) => {
                     </tr>
                 </tbody>
                 </table> 
-                <button onClick={() => {AddRow(usersArr,setUsersArr,allValues,setAllValues,allSkills,flagSkill,setFlagSkill)}} >Dodaj mnie mordo!</button>  
+                <button onClick={() => {AddRow(usersArr,setUsersArr,allValues,setAllValues,allSkills,setAllSkills,flagSkill,setFlagSkill)}} >Dodaj mnie mordo!</button>  
                 <br/>
                 </>
     )

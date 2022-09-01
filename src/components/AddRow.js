@@ -1,4 +1,4 @@
-const AddRow = ((usersArr,setUsersArr,allValues,setAllValues,allSkills,flagSkill) => {
+const AddRow = ((usersArr,setUsersArr,allValues,setAllValues,allSkills,setAllSkills,flagSkill) => {
     if (!allValues['name']) {
         window.alert("Imie nie moze byc puste")
       } else if (!allValues['surname']) {
@@ -15,6 +15,8 @@ const AddRow = ((usersArr,setUsersArr,allValues,setAllValues,allSkills,flagSkill
         tmpArr["skills"]=allSkills;
         setAllValues(tmpArr);
         setUsersArr([...usersArr, allValues]);
+        setAllValues({});
+        setAllSkills({});
       }
 })
 
