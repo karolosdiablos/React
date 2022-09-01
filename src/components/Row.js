@@ -5,7 +5,6 @@ const Row = (({usersArr,setUsersArr, DeleteRow, DeleteAll, EditRow}) => {
   const [sumSalary, setSumSalary] = useState(0);
   const [sumSkill,setSumSkill] = useState([]);
 
-  let inn=0;
 
   useEffect(() =>{
     let tmpSal=0;
@@ -36,7 +35,7 @@ const Row = (({usersArr,setUsersArr, DeleteRow, DeleteAll, EditRow}) => {
       <>
       {usersArr.map((a, index) =>
         <tr key={a.index}>
-          <td>{a.index}</td>
+          
           <td>{a.name}</td>
           <td>{a.surname}</td>
           <td>{a.salary} zł</td>

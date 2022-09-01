@@ -2,6 +2,7 @@ import { useEffect, useState} from 'react';
 import './App.css';
 import Row from './components/Row';
 import Header from './components/Header';
+import AddNewUser from './components/AddNewUser';
 
 const users = [
   {
@@ -75,7 +76,8 @@ users.map((a,index) => {
   a.index=index;
 });
 
-let lastIndex = users[users.length-1].index+1;
+
+
 
 const EditRow = (({a}) => {
 
@@ -120,7 +122,9 @@ function App() {
   
   return (
     <div className="App">
+      
       <header className="App-header">
+      <AddNewUser usersArr={usersArr} setUsersArr={setUsersArr}/>
         <table>
         <Header/>
         <tbody>
@@ -128,10 +132,11 @@ function App() {
           <select onChange={(e) => {setSortType(e.target.value)}}>
               <option value="default">Bez sortowania</option>
               <option value="asc" >Rosnąco</option>
-              <option value="dsc">Malejąco</option>
+              <option value="dsc">Malejąco</option> 
           </select>
+
           </td></tr>
-          
+
         <Row usersArr={usersArr} setUsersArr={setUsersArr} DeleteRow={DeleteRow} DeleteAll={DeleteAll} EditRow={EditRow}/>
         </tbody>
         </table>

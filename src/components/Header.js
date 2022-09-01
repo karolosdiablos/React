@@ -2,7 +2,6 @@ const Header = (() =>{
     return (
           <thead>
           <tr>
-            <th>Index</th>
             <th>Imię</th>
             <th>Nazwisko</th>
             <th>Wynagrodzenie</th>
