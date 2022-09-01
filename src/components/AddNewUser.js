@@ -27,8 +27,8 @@ const AddNewUser =  (({usersArr,setUsersArr}) => {
     return (
         <>
             Imię: <br/><input type='text' name="name" value={allValues.name} onChange={(changeHandler)}/><br/>
-            Nazwisko: <br/><input type='text' name="surname" onChange={changeHandler} /><br/>
-            Wynagrodzenie: <br/><input type='number' name="salary" onChange={changeHandler} /><br/>
+            Nazwisko: <br/><input type='text' name="surname" value={allValues.surname} onChange={changeHandler} /><br/>
+            Wynagrodzenie: <br/><input type='number' name="salary" value={allValues.salary} onChange={changeHandler} /><br/>
                 <table>
                     <tbody>
                 <tr><td>Skill: <input type='text' name="skillName" value={newSkill} onChange={(event) => {setNewSkill(event.target.value)}}/></td>

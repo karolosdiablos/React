@@ -15,7 +15,11 @@ const AddRow = ((usersArr,setUsersArr,allValues,setAllValues,allSkills,setAllSki
         tmpArr["skills"]=allSkills;
         setAllValues(tmpArr);
         setUsersArr([...usersArr, allValues]);
-        setAllValues({});
+        setAllValues({
+          name: '',
+          surname: '',
+          salary: '',
+        });
         setAllSkills({});
       }
 })
