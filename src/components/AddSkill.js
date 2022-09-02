@@ -3,8 +3,6 @@ const AddSkill = ((allSkills,setAllSkills,newSkill,setNewSkill,newSkillValue,set
         let tmpSkill = allSkills;
         setFlagSkill(1);
         tmpSkill[newSkill] = parseInt(newSkillValue);
-        // console.log(skill);
-        // allSkills[newSkill] = newSkillValue;
         setAllSkills(tmpSkill);
         setNewSkill("");
         setNewSkillValue("");
