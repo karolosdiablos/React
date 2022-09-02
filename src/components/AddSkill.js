@@ -9,7 +9,7 @@ const AddSkill = ((allSkills,setAllSkills,newSkill,setNewSkill,newSkillValue,set
         setNewSkill("");
         setNewSkillValue("");
         } else if (typeof newSkill !== 'string' || newSkill == '') {
-          window.alert("nazwa skilla nie moeze byc pusta!")
+          window.alert("Nazwa skilla nie moze byc pusta!")
         } else if (typeof newSkillValue !== 'string') {
           window.alert("Wartość skilla nie moze byc pusta")
         }
